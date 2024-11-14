@@ -2,7 +2,7 @@ name: Exemplo de CI # Nome da ação
 
 on:
   pull_request: # Evento que irá disparar a ação
-    branches: [ master ] # Branch que irá disparar a ação
+    branches: [ master ] # Branch que irá disparar a ação fds
 
 jobs:
   build: # Trabalhos a serem executados
