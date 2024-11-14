@@ -2,7 +2,7 @@ name: Exemplo de CI # Nome da ação
 
 on:
   pull_request: # Evento que irá disparar a ação
-    branches: [ master, develop ] # Branch que irá disparar a ação
+    branches: [ master, develop ] # Branch que irá disparar a ação jj
     types: [opened, reopened]
 jobs:
   build: # Trabalhos a serem executados
