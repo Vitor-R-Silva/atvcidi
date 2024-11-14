@@ -7,7 +7,7 @@ on:
 
 jobs:
   build: # Trabalhos a serem executados
-    runs-on: ubuntu-latest # Sistema operacional a ser utilizado
+    runs-on: ubuntu-latest # Sistema operacional a ser utilizadoo
     steps: # Passos a serem executados
       - name: Checkout code # Nome do passo, nesse caso, clonar o repositório
         uses: actions/checkout@v4 # action escolhida para clonar o repositório
