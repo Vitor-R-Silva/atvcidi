@@ -2,7 +2,7 @@ name: Exemplo de CI # Nome da ação
 
 on:
   push: # Evento que irá disparar a ação
-    branches: [ main ] # Branch que irá disparar a ação
+    branches: [ master ] # Branch que irá disparar a ação
 
 jobs:
   build: # Trabalhos a serem executados
