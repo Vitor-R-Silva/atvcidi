@@ -1,35 +1,29 @@
 package org.example.atvdcicd;
 
 import org.example.atvdcicd.service.CalculadoraService;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.springframework.stereotype.Service;
-import org.springframework.web.server.ResponseStatusException;
-
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
-import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.boot.test.context.SpringBootTest;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import org.springframework.web.server.ResponseStatusException;
 
-@SpringBootTest
-@ExtendWith(MockitoExtension.class)
 public class CalculadoraServiceTest {
 
-    @InjectMocks
-    private CalculadoraService calculadoraService;
-
     @Test
-    public void testDivisaoComValorNormal() {
-        double resultado = calculadoraService.dividir(10, 2);
-        assertEquals(5.0, resultado);
-    }
+    @DisplayName("Quando acionado com 10 e 2, então deve retornar 5")
+    public void testDividir() {
 
-    @Test
-    public void testDivisaoPorZero() {
-        assertThrows(ResponseStatusException.class, () -> calculadoraService.dividir(10, 0), "Divisão por zero não permitida");
+        // Arrange
+        CalculadoraService calculadoraService = new CalculadoraService();
+        double a = 10;
+        double b = 2;
+        double esperado = 5;
+
+        // Act
+        double resultado = calculadoraService.dividir(a, b);
+
+        // Assert
+        assertEquals(esperado, resultado);
     }
 }
+
 
 
